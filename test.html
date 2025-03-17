@@ -1,0 +1,103 @@
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 智能經期助手</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFE4E1;
+            color: #D63384;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FFB6C1;
+            padding: 15px;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #D63384;
+            font-weight: bold;
+        }
+        section {
+            background: #FFF0F5;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #FF69B4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #D63384;
+        }
+        input {
+            padding: 10px;
+            border: 1px solid #FF69B4;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AI 智能經期助手</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#predict">AI 預測</a></li>
+                <li><a href="#chat">AI 聊天助理</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>📅 經期追蹤</h2>
+        <p>查看你的經期日曆，獲得 AI 預測與健康建議。</p>
+        <button onclick="showPrediction()">查看預測</button>
+    </section>
+    
+    <section id="predict">
+        <h2>📊 AI 智能預測</h2>
+        <p>根據你的數據，AI 預測下次經期與情緒變化。</p>
+        <div id="prediction-result">尚無預測結果</div>
+    </section>
+    
+    <section id="chat">
+        <h2>🤖 AI 聊天助理</h2>
+        <p>有關月經、健康、情緒的問題？讓 AI 來幫助你！</p>
+        <input type="text" id="user-input" placeholder="輸入你的問題...">
+        <button onclick="askAI()">發送</button>
+        <div id="chat-response">AI 回覆將顯示在這裡</div>
+    </section>
+    
+    <script>
+        function showPrediction() {
+            document.getElementById('prediction-result').innerText = "你的下次經期預測為 2025 年 3 月 25 日，可能有輕微疲勞，建議補充維生素 B6。";
+        }
+        
+        function askAI() {
+            let userInput = document.getElementById('user-input').value;
+            document.getElementById('chat-response').innerText = "AI 回覆: 這是一個很好的問題！目前 AI 正在學習你的經期模式，請耐心等待。";
+        }
+    </script>
+</body>
+</html>
